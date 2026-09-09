@@ -1,14 +1,14 @@
 # Implementation Contract
 
-Date: 2026-09-09 | Agent: Cody | Status: Testing
+Date: 2026-09-09 | Agent: Cody | Status: Verified package; live assignments recorded separately
 
 ## Authorization And Scope
 
-Jack authorized building this skill in ZedBiz44/z-files-folders-Skill, creating its SOP in the specified Skills database, and testing on Rocky, Terry, and Harry. Apply Get-er-Done within that scope. Test Rocky before deploying to the other two. No fleet rollout, map edits, storage redesign, authentication changes, or user-content migration is part of this release.
+Jack authorized building this skill in ZedBiz44/z-files-folders-Skill, creating its SOP in the specified Skills database, and testing on Rocky, Terry, and Harry. Apply Get-er-Done within that scope. Test Rocky before deploying to the other two. Jack subsequently explicitly assigned Rocky to organize ZVIM-LightningWP, Terry to organize ZVIM-LightningSM, and Harry to organize ZVIM-LightningLI. Those existing project roots are the approved live-content boundaries. No wider fleet rollout, map edits, storage redesign, or authentication changes are part of this release.
 
 ## Design
 
-Risk level: Operational. This release organizes synthetic samples and provides bounded file-handling instructions using approved existing tools. It does not authorize sensitive-data migrations, permission changes, production configuration changes, or paid services. Sensitive items with uncertain access stop for review. Jack's original instruction explicitly approves all three named test targets after the first successful test.
+Risk level: Operational. This release first tested synthetic samples, then organized the three explicitly assigned venture folders through each agent's existing approved tools. It does not authorize sensitive-data migrations, permission changes, production configuration changes, or paid services. Sensitive items with uncertain access stop for review. Jack's original instruction explicitly approves all three named test targets after the first successful test.
 
 The current upstream developer skill at commit 3e3629942bd29e0e1423856d933e4dd13a300301 was read. OpenClaw's live built-in Skill Creator was read at `/home/openclaw/.npm-global/lib/node_modules/openclaw/skills/skill-creator/SKILL.md`; its repository-owned source workflow and validator apply.
 
@@ -27,6 +27,7 @@ The repository was empty at initial inspection. Existing overlapping skills chec
 - Run the Z AI Skill Developer structural validator against a staging directory named z-files-folders.
 - Inspect all links, templates, permissions, and trust boundaries. This package contains no executable script and no credentials.
 - Confirm OpenClaw discovers the committed package, then test fresh sessions with positive, paraphrased, boundary, and negative requests.
-- Use only synthetic live file operations in a verified approved test destination. Preserve sources and existing permissions. Read back actual content and IDs.
+- Start with synthetic tests; after the explicit project assignments, perform bounded live organization within those verified roots. Preserve sources and existing permissions. Read back actual content and IDs.
 - Record source commit, hashes, agent sessions, live outcomes, and any failed check in a separate pilot report.
 - Install only the committed runtime files. Before replacing an existing installation, preserve it outside the skill root. Roll back by restoring that directory; for a first installation, relocate the new directory outside the skill root. Confirm skill discovery again. Do not restart gateways unless fresh-session discovery requires it.
+
