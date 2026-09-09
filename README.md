@@ -23,3 +23,6 @@ The live Notion sources own the map and policy. This repository owns the executa
 ## Verification
 
 Use [behavior test prompts](tests/prompts.md) and retain actual named-agent results. A local copy test does not establish Google Drive access.
+
+- [Operational SOP in Notion](https://www.notion.so/3d6a3e33d581811193fcff5acbae5253)
+- [Three-agent build and verification issue](https://github.com/ZedBiz44/z-files-folders-Skill/issues/1)
