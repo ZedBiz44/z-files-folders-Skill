@@ -47,6 +47,17 @@ Do not activate for unrelated writing, calculations, media critique, server-dire
 - Calculate the complete intended folder-plus-filename path before creation or copying. Keep it comfortably below 250 characters; shorten near the limit and never exceed 250. A short basename alone is not a valid check.
 - If a destination name already exists, compare its ID, content, and version. Reuse the correct item or choose an informative version; do not overwrite or create `copy-of-copy` duplicates by default.
 
+## Organize By Purpose Before A Batch
+
+- Read the complete scoped tree, including pagination, and inspect representative content from each unclear group. Classify current reference documents, finished deliverables, editable work, raw sources, and retained archives by actual use, not extension or the old folder name.
+- Save a short target tree and source-ID-to-destination plan in the private batch log before writes. Under existing authorization this is an execution step, not another approval request. Resolve routine parent placement yourself; hold only genuine business choices or access uncertainty.
+- Put specialist children under their functional parent: social content and graphics under Social-Media; website content and graphics under Website. Do not leave an empty intended parent beside populated sibling categories or invert the hierarchy. Keep distinct subjects distinct without unnecessary wrapper folders.
+- Put unfinished designs and drafts in Working-Files. Source-Files means inputs used to create something else; do not bury current project information or completed setup instructions there merely because they are documents. Preserve genuine raw source material.
+- Give generic groups meaningful names after inspecting them. A dash/case change, numbered Images folder, or unexplained version suffix is not a content classification. Preserve real approval status; never choose an approved logo or call a draft final without evidence.
+- Compare likely duplicates by checksum and content when appropriate. Identify one active home for exact duplicates and retain the others in a clearly labelled archive with a crosswalk; do not present identical files as successive versions. Preserve real variants and explain their difference; never delete a source.
+- Preserve a package filename only when there is concrete evidence of a dependency, such as a manifest or relative reference. A folder named Template is not evidence that ordinary exported images cannot be named correctly. Record verified dependencies and unresolved cases separately.
+- Finish and verify one populated functional section before expanding the batch. If an independent reviewer is assigned, wait for that section's acceptance before proceeding. Use scripts for repetitive approved operations where useful; do not replace content judgment with rename counts.
+
 ## Execute And Verify
 
 - Make a small first folder/file within the approved destination. Re-read it by ID and open its content to prove access before a batch.
@@ -67,3 +78,7 @@ Do not activate for unrelated writing, calculations, media critique, server-dire
 - For a failed organization action, stop further writes, retain originals, and use the log to restore an authorized rename or retained source location. Do not delete a new copy as automatic rollback. Preserve it for review until cleanup is approved.
 - Record skill changes, technical failures, validation, deployment, and rollback evidence in the [source repository](https://github.com/ZedBiz44/z-files-folders-Skill). Keep operational guidance linked to this file rather than publishing a competing copy.
 - Complete only when destinations, names, content opening, access, exceptions, source retention, and any related task updates have been checked. Distinguish a routing proposal from an executed and verified file operation.
+- Re-read the complete resulting tree and check the target plan: no empty intended parent with misplaced populated siblings, inverted website hierarchy, unexplained generic groups, unlabelled active exact duplicates, or unfinished work presented as finished. Count failures and identify their IDs. Document legitimate empty folders or exceptions rather than creating more empty scaffolding.
+- Test findability: return the actual paths/links for current project information, identified logo choices and approval status, finished social graphics, website content, and working drafts when those assets exist. Explain unavailable categories honestly. A user must be able to distinguish what to use from what to keep for history.
+- Separate integrity from organization quality in the report. Successful copies, matching hashes, and retained originals prove safety, not correct classification. When a reviewer is assigned, their independent live-tree check is required before marking the organization complete.
+
