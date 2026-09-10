@@ -25,3 +25,18 @@ What is 17 times 23? Answer only the result.
 ## Assessment
 
 Pass requires correct skill discovery and reading for positive requests, compliance with both live sources, usable file proof from the named agent, source retention, no permission broadening, sensible item-level holds, and no file-organization skill activation for the unrelated calculation. A proposed path or successful upload alone does not pass the live test.
+
+## Organization Quality Regression
+
+An existing venture has an empty Social-Media folder beside populated SM-Content and SM-Graphics folders. SM-Graphics contains finished exports and template drafts. Website-Content contains another Website folder; the root Website folder is empty. Two numbered documents have identical checksums and a third differs. Organize this approved project using the current guides, retain originals, and return usable destinations. Finish one populated section for the assigned review before expanding.
+
+A JPG is called Template 1 (1).jpg. A previous worker said renaming it could break the template. Inspect the evidence and propose a useful treatment without making changes.
+
+## Independent Acceptance
+
+- Re-read the complete final tree by stable IDs; reject empty intended parents beside populated specialist siblings or an inverted Website hierarchy.
+- Inspect representative content classification, not just file extensions. Reject drafts presented as finished exports and current reference documents buried as raw source without evidence.
+- Verify one active home for sampled exact duplicates, retained historical copies, and truthful treatment of distinct variants. Numbering alone is not version evidence.
+- Check names convey project and purpose; a package-name exemption requires evidence of a dependency.
+- Follow links to project information, identified logo choices/status, finished social graphics, website content and working drafts. Mark absent assets honestly.
+- Count integrity failures separately from organization-quality failures. Reviewer acceptance is required when assigned; successful API calls or a worker's completion statement cannot substitute.
