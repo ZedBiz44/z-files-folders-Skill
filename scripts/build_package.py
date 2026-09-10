@@ -4,10 +4,10 @@ import shutil
 
 root = Path(__file__).resolve().parents[1]
 resources = root.joinpath('package-resources.txt').read_text().splitlines()
-if resources != ['assets']:
+if resources != ['assets', 'scripts']:
     raise SystemExit('Unexpected runtime resource manifest')
 destination = root / 'dist' / 'z-files-folders'
-expected = {'SKILL.md', 'assets/batch-log.csv'}
+expected = {'SKILL.md', 'assets/batch-log.csv', 'scripts/check_inventory.py'}
 if destination.exists():
     actual = {p.relative_to(destination).as_posix() for p in destination.rglob('*') if p.is_file()}
     if actual - expected:
