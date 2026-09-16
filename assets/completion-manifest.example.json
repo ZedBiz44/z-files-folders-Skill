@@ -1,0 +1,9 @@
+{
+  "root_ancestry": [{"id": "verified-drive-id", "name": "Z-Ventures"}, {"id": "verified-key-folder-id", "name": "ZVIM-Info-Marketing"}, {"id": "verified-project-id", "name": "ZVIM-Example"}],
+  "before": {"complete": true, "items": []},
+  "after": {"complete": true, "items": []},
+  "plan": {"recorded_at": "REPLACE_WITH_ACTUAL_ISO_TIMESTAMP_WITH_TIMEZONE", "first_write_at": "REPLACE_WITH_ACTUAL_RECEIPT_TIMESTAMP", "evidence_path": "PRIVATE_SAVED_PLAN"},
+  "file_evidence": [
+    {"source_id": "ONE_ROW_PER_ORIGINAL_FILE", "inspected": true, "inspection_source_id": "SAME_SOURCE_ID_OR_BYTE_IDENTICAL_SOURCE", "inspection_method": "ACTUAL_SUCCESSFUL_METHOD", "inspection_evidence": "PRIVATE_TOOL_RESULT_OR_VIEW_RECORD", "purpose": "OBSERVED_USE", "planned_path": "PLANNED_PROJECT_RELATIVE_PATH", "classification_reason": "CONTENT_REASON", "active_id": "VERIFIED_ACTIVE_FILE_ID", "match_method": "binary", "match_evidence": "PRIVATE_COPY_VERIFICATION"}
+  ]
+}
