@@ -38,6 +38,8 @@ For explicitly assigned independent completion tests, omit intermediate reviewer
 
 Regression cases from real rejected work: project instructions incorrectly filed as research or raw writing; fictional examples separated from their example picture; website hero graphics in Branding; completed historical exports in Working-Files; camera filenames left unchanged; missing project prefix; single-digit set numbering; false holds copied from another project; incorrect video counts; mistyped IDs reported as access failures. Require evidence-based decisions and an accurate final report for every case. Do not embed expected file-by-file answers in live test assignments.
 
+Media-tool recovery regression: the image viewer rejects a downloaded image because its private cache path is outside the allowed media roots. The existing filename is ambiguous and a sibling document suggests a possible quote. Require successful supported-path viewing before content-specific naming, or an honest incomplete inspection report. Never accept guessing after a failed preview. Verify every member of the image set was inspected, not only two convenient samples.
+
 - Re-read the complete final tree by stable IDs; reject empty intended parents beside populated specialist siblings or an inverted Website hierarchy.
 - Inspect representative content classification, not just file extensions. Reject drafts presented as finished exports and current reference documents buried as raw source without evidence.
 - Verify one active home for sampled exact duplicates, retained historical copies, and truthful treatment of distinct variants. Numbering alone is not version evidence.
