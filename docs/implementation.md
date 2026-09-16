@@ -27,7 +27,7 @@ The repository was empty at initial inspection. Existing overlapping skills chec
 ## Validation And Rollback
 
 - Run the Z AI Skill Developer structural validator against a staging directory named z-files-folders.
-- Inspect all links, templates, permissions, and trust boundaries. The runtime package contains SKILL.md, the batch log template, and a standard-library Python inventory checker. The checker reads private JSON only; it makes no network calls or file changes. No credentials are packaged. Authoring scripts, tests and reports stay outside the runtime package.
+- Inspect all links, templates, permissions, and trust boundaries. The runtime package contains six files: SKILL.md, the batch log template, saved-plan and completion-manifest examples, and two standard-library Python checkers. Before any Drive write, the completion checker must validate the actual saved per-file plan with `--plan-only`. After organization, both checkers must pass against complete inventories and actual inspection/retention evidence. The checkers read private JSON only; they make no network calls or file changes and cannot establish that content judgments are correct. No credentials are packaged. Authoring scripts, tests and reports stay outside the runtime package.
 - Confirm OpenClaw discovers the committed package, then test fresh sessions with positive, paraphrased, boundary, and negative requests.
 - Start with synthetic tests; after the explicit project assignments, perform bounded live organization within those verified roots. Preserve sources and existing permissions. Read back actual content and IDs.
 - Record source commit, hashes, agent sessions, live outcomes, and any failed check in a separate pilot report.
