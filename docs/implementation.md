@@ -8,6 +8,8 @@ Jack authorized building this skill in ZedBiz44/z-files-folders-Skill, creating 
 
 ## Design
 
+On 2026-09-16 Jack authorized further skill revisions and fresh folder selection across existing shared drives for Rocky, Terry and Harry. Require four successful independent cleanups per agent. Use distinct populated folders, preserve access and originals, and avoid overlapping assignments. Ask the executing agent why each failed attempt failed, improve the reusable skill and test fresh work. Previously corrected projects do not count. The independent completion test replaces intermediate reviewer coaching with agent self-review followed by independent final review. Start the revision on Rocky before expanding. Track attempts and failures in issue #4; no claim of independent reliability until live results meet the target.
+
 Risk level: Operational. This release first tested synthetic samples, then organized the three explicitly assigned venture folders through each agent's existing approved tools. It does not authorize sensitive-data migrations, permission changes, production configuration changes, or paid services. Sensitive items with uncertain access stop for review. Jack's original instruction explicitly approves all three named test targets after the first successful test.
 
 The current upstream developer skill at commit 3e3629942bd29e0e1423856d933e4dd13a300301 was read. OpenClaw's live built-in Skill Creator was read at `/home/openclaw/.npm-global/lib/node_modules/openclaw/skills/skill-creator/SKILL.md`; its repository-owned source workflow and validator apply.
