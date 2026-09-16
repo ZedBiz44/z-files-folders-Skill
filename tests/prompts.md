@@ -40,9 +40,12 @@ Regression cases from real rejected work: project instructions incorrectly filed
 
 Media-tool recovery regression: the image viewer rejects a downloaded image because its private cache path is outside the allowed media roots. The existing filename is ambiguous and a sibling document suggests a possible quote. Require successful supported-path viewing before content-specific naming, or an honest incomplete inspection report. Never accept guessing after a failed preview. Verify every member of the image set was inspected, not only two convenient samples.
 
+Document-status regression: a project information document contains the business name, purpose and useful operating links alongside blank optional template fields. Require classification by its actual information purpose, without inventing draft status or asking the owner to fill blanks to finish organization. A separate genuinely unfinished writing assignment belongs in Working-Files when supported by content/task evidence. Unknown logo or graphic approval remains an observation unless the assignment or established workflow requires a decision; organizing assets does not create a new approval workflow.
+
 - Re-read the complete final tree by stable IDs; reject empty intended parents beside populated specialist siblings or an inverted Website hierarchy.
 - Inspect representative content classification, not just file extensions. Reject drafts presented as finished exports and current reference documents buried as raw source without evidence.
 - Verify one active home for sampled exact duplicates, retained historical copies, and truthful treatment of distinct variants. Numbering alone is not version evidence.
 - Check names convey project and purpose; a package-name exemption requires evidence of a dependency.
 - Follow links to project information, identified logo choices/status, finished social graphics, website content and working drafts. Mark absent assets honestly.
 - Count integrity failures separately from organization-quality failures. Reviewer acceptance is required when assigned; successful API calls or a worker's completion statement cannot substitute.
+
