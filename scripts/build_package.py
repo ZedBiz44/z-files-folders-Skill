@@ -8,6 +8,7 @@ if resources != ['assets', 'scripts']:
     raise SystemExit('Unexpected runtime resource manifest')
 destination = root / 'dist' / 'z-files-folders'
 expected = {'SKILL.md', 'assets/batch-log.csv', 'assets/completion-manifest.example.json',
+            'assets/prewrite-plan.example.json',
             'scripts/check_inventory.py', 'scripts/check_completion.py'}
 if destination.exists():
     actual = {p.relative_to(destination).as_posix() for p in destination.rglob('*') if p.is_file()}
