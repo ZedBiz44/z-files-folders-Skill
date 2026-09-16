@@ -27,6 +27,8 @@ Use [behavior test prompts](tests/prompts.md) and retain actual named-agent resu
 - [Operational SOP in Notion](https://www.notion.so/3d6a3e33d581811193fcff5acbae5253)
 - [Three-agent build and verification issue](https://github.com/ZedBiz44/z-files-folders-Skill/issues/1)
 
-The runtime package includes a dependency-free, read-only Python inventory checker. It checks a complete private metadata export for active exact duplicates, missing binary checksums and excessive full paths. It does not replace content inspection or independent organization review. Run `python -m unittest discover -s tests` for its focused regression tests.
+The runtime package includes two dependency-free, read-only Python checks. The inventory checker finds active exact duplicates, missing binary checksums and excessive full paths. The completion gate checks per-file inspection records, every original's retention, active-content mappings, verified ancestry and a plan saved before writes. Evidence must come from real tool results; neither checker proves classification or replaces independent review. Run `python -m unittest discover -s tests` for the regression tests.
+
+The [four-successes-per-agent test](https://github.com/ZedBiz44/z-files-folders-Skill/issues/4) tracks the current reliability work. Earlier results corrected by a reviewer are not independent passes. Consult that issue for the current score and release evidence.
 
 - [Independent quality repair and final verification](docs/2026-09-09-quality-repair.md)
