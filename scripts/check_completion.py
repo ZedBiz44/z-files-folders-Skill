@@ -2,8 +2,17 @@
 import argparse
 from datetime import datetime
 import json
+import re
 from pathlib import Path
 from check_inventory import check
+
+
+def inspection_unavailable(row):
+    """Reject explicit admissions of missing content inspection, not just short labels."""
+    method = row.get('inspection_method', '').lower().strip()
+    return method in ('binary', 'checksum', 'download', 'metadata') or bool(re.search(
+        r'\b(?:assumed|assuming|unavailable|failed|path restriction|file not found|'
+        r'not (?:opened|viewed|read|inspected|rendered|rasterized)|sibling)\b', method))
 
 
 def check_file_plan(plan, before):
@@ -20,7 +29,7 @@ def check_file_plan(plan, before):
     for row in rows:
         if any(not isinstance(row.get(k), str) or not row[k].strip() for k in required):
             issues.append({'type': 'incomplete_prewrite_decision', 'id': row.get('source_id')})
-        if row.get('inspection_method', '').lower().strip() in ('binary', 'checksum', 'download', 'metadata'):
+        if inspection_unavailable(row):
             issues.append({'type': 'content_not_inspected', 'id': row.get('source_id')})
     return issues
 
@@ -78,7 +87,7 @@ def check_completion(data):
                     'classification_reason', 'active_id', 'match_method', 'match_evidence']
         if row.get('inspected') is not True or any(not isinstance(row.get(k), str) or not row[k].strip() for k in required):
             issues.append({'type': 'incomplete_file_evidence', 'id': fid})
-        if row.get('inspection_method', '').lower().strip() in ('binary', 'checksum', 'download', 'metadata'):
+        if inspection_unavailable(row):
             issues.append({'type': 'content_not_inspected', 'id': fid})
         inspected_id = row.get('inspection_source_id', fid)
         inspected_source = source_files.get(inspected_id, {})
