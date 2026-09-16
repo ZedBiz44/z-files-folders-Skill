@@ -1,9 +1,12 @@
 import copy
+import json
+import subprocess
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from check_completion import check_completion
+from check_completion import check_completion, check_file_plan
 
 
 def manifest():
@@ -11,13 +14,41 @@ def manifest():
     return {'root_ancestry': [{'id': 'drive', 'name': 'Shared-Drive'}, {'id': 'project', 'name': 'Project'}],
             'before': {'complete': True, 'items': [f]},
             'after': {'complete': True, 'items': [dict(f, path='Archive/source.png', active=False), dict(f, id='copy', path='project-picture.png', active=True)]},
-            'plan': {'recorded_at': '2026-09-16T10:00:00Z', 'first_write_at': '2026-09-16T10:01:00Z', 'evidence_path': 'private/plan.json'},
+            'plan': {'recorded_at': '2026-09-16T10:00:00Z', 'first_write_at': '2026-09-16T10:01:00Z', 'evidence_path': 'private/plan.json', 'file_plan': [{'source_id': 'source', 'planned_path': 'project-picture.png', 'purpose': 'website graphic', 'classification_reason': 'finished website graphic', 'inspection_method': 'image viewer', 'inspection_evidence': 'private/view.json'}]},
             'file_evidence': [{'source_id': 'source', 'inspected': True, 'inspection_method': 'successful image viewer', 'inspection_evidence': 'private/view.json', 'purpose': 'website graphic', 'planned_path': 'project-picture.png', 'classification_reason': 'finished website graphic', 'active_id': 'copy', 'match_method': 'binary', 'match_evidence': 'private/hash.json'}]}
 
 
 class CompletionTests(unittest.TestCase):
     def test_complete(self):
         self.assertTrue(check_completion(manifest())['passed'])
+
+    def test_folder_only_plan_rejected(self):
+        d = manifest(); d['plan']['file_plan'] = []
+        self.assertIn('prewrite_file_coverage', [x['type'] for x in check_completion(d)['issues']])
+
+    def test_checksum_is_not_content_inspection(self):
+        d = manifest(); d['file_evidence'][0]['inspection_method'] = 'binary'
+        self.assertIn('content_not_inspected', [x['type'] for x in check_completion(d)['issues']])
+        d['plan']['file_plan'][0]['inspection_method'] = 'download'
+        self.assertIn('content_not_inspected', [x['type'] for x in check_file_plan(d['plan'], d['before'])])
+
+    def test_cli_reads_saved_plan_instead_of_claimed_rows(self):
+        script = Path(__file__).resolve().parents[1] / 'scripts/check_completion.py'
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory); d = manifest()
+            d['plan']['evidence_path'] = 'plan.json'
+            (root/'manifest.json').write_text(json.dumps(d))
+            saved = copy.deepcopy(d['plan']); saved['file_plan'] = []
+            (root/'plan.json').write_text(json.dumps(saved))
+            command = [sys.executable, str(script), str(root/'manifest.json'), '--plan-only']
+            failed = subprocess.run(command, capture_output=True, text=True)
+            self.assertEqual(failed.returncode, 1)
+            saved['file_plan'] = d['plan']['file_plan']
+            (root/'plan.json').write_text(json.dumps(saved))
+            self.assertEqual(subprocess.run(command, capture_output=True).returncode, 0)
+            self.assertEqual(subprocess.run(command[:-1], capture_output=True).returncode, 0)
+            (root/'plan.json').unlink()
+            self.assertEqual(subprocess.run(command, capture_output=True).returncode, 2)
 
     def test_missing_file_inspection(self):
         d = manifest(); d['file_evidence'] = []
