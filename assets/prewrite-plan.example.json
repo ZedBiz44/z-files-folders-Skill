@@ -1,0 +1,7 @@
+{
+  "recorded_at": "ACTUAL_SAVE_TIME_WITH_TIMEZONE",
+  "target_tree": ["CHOSEN_PROJECT_RELATIVE_FOLDER"],
+  "file_plan": [
+    {"source_id": "ONE_ROW_PER_ORIGINAL_FILE_INCLUDING_DUPLICATES", "planned_path": "CHOSEN_PROJECT_RELATIVE_FILE_PATH", "purpose": "OBSERVED_USE", "classification_reason": "WHY_THE_CONTENT_BELONGS_HERE", "inspection_method": "ACTUAL_SUCCESSFUL_CONTENT_READING_OR_VIEWING_METHOD", "inspection_evidence": "PRIVATE_SUCCESSFUL_TOOL_RESULT_AND_SOURCE_ID"}
+  ]
+}
