@@ -34,6 +34,10 @@ A JPG is called Template 1 (1).jpg. A previous worker said renaming it could bre
 
 ## Independent Acceptance
 
+For explicitly assigned independent completion tests, omit intermediate reviewer hints. Require a fresh tree and the agent's self-review record before inspection. A reviewer-discovered defect makes that attempt a failure even if subsequently repaired. Count fresh populated folder assignments, not subdivisions of the same tested folder or empty templates. Keep attempts and successes separate for each runtime and skill version.
+
+Regression cases from real rejected work: project instructions incorrectly filed as research or raw writing; fictional examples separated from their example picture; website hero graphics in Branding; completed historical exports in Working-Files; camera filenames left unchanged; missing project prefix; single-digit set numbering; false holds copied from another project; incorrect video counts; mistyped IDs reported as access failures. Require evidence-based decisions and an accurate final report for every case. Do not embed expected file-by-file answers in live test assignments.
+
 - Re-read the complete final tree by stable IDs; reject empty intended parents beside populated specialist siblings or an inverted Website hierarchy.
 - Inspect representative content classification, not just file extensions. Reject drafts presented as finished exports and current reference documents buried as raw source without evidence.
 - Verify one active home for sampled exact duplicates, retained historical copies, and truthful treatment of distinct variants. Numbering alone is not version evidence.
