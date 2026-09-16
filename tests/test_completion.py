@@ -32,6 +32,21 @@ class CompletionTests(unittest.TestCase):
         d['plan']['file_plan'][0]['inspection_method'] = 'download'
         self.assertIn('content_not_inspected', [x['type'] for x in check_file_plan(d['plan'], d['before'])])
 
+    def test_explicit_failed_inspection_cannot_pass_in_a_long_description(self):
+        methods = [
+            'local file size/type plus sibling Word brand-guide text; PDF pages not rasterized by pdf tool path restriction',
+            'PDF viewer failed; file not found',
+            'assumed from image',
+            'content inspection unavailable',
+        ]
+        for method in methods:
+            with self.subTest(method=method):
+                d = manifest()
+                d['file_evidence'][0]['inspection_method'] = method
+                self.assertIn('content_not_inspected', [x['type'] for x in check_completion(d)['issues']])
+                d['plan']['file_plan'][0]['inspection_method'] = method
+                self.assertIn('content_not_inspected', [x['type'] for x in check_file_plan(d['plan'], d['before'])])
+
     def test_cli_reads_saved_plan_instead_of_claimed_rows(self):
         script = Path(__file__).resolve().parents[1] / 'scripts/check_completion.py'
         with tempfile.TemporaryDirectory() as directory:
