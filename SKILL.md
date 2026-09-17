@@ -9,6 +9,10 @@ Use for ZedBiz file placement, file/folder naming, project folder creation, asse
 
 Do not activate for unrelated writing, calculations, media critique, server-directory repair, or installing software. For knowledge-page classification use `z-knowledge-routing`; for document ingestion use the applicable ingestion skill. Do not reorganize agent runtime files with this skill.
 
+## ChatGPT and Codex access
+Use the connected Google Drive tools and the native Drive skill for Drive mechanics; verify the approved account and project boundary. Apply GOG/private-registry instructions below only to OpenClaw GOG execution. Local folders are working locations unless explicitly approved as the final home.
+For an ordinary single deliverable, use naming, destination and read-back checks. Load the batch inventory, migration and completion gates only for organization or migration batches; do not impose a full migration process on a routine save.
+
 ## Read The Two Authorities
 
 - Read the current [Z-Knowledge Folder Structure](https://www.notion.so/386a3e33d58180ea96fbc50b60102fe2) for the destination map, including its linked folder database when a relevant name, key, or Drive link needs checking.

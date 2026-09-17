@@ -1,0 +1,4 @@
+interface:
+  default_prompt: "Use $z-files-folders for the requested ZedBiz workflow."
+  display_name: "Z Files Folders"
+  short_description: "Help with Z Files Folders tasks"
