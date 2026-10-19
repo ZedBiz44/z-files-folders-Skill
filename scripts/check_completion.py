@@ -38,7 +38,7 @@ def check_completion(data):
     issues = []
     ancestry = data.get('root_ancestry', [])
     if len(ancestry) < 2 or any(not x.get('id') or not x.get('name') for x in ancestry):
-        raise ValueError('root_ancestry must contain verified Drive-to-project IDs and names')
+        raise ValueError('root_ancestry must contain verified Drive-to-approved-root IDs and names')
     root_path = '/'.join(x['name'] for x in ancestry)
     inventory = data['after']
     report = check(inventory, root_path, 230)
