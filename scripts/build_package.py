@@ -4,10 +4,10 @@ import shutil
 
 root = Path(__file__).resolve().parents[1]
 resources = root.joinpath('package-resources.txt').read_text().splitlines()
-if resources != ['assets', 'scripts']:
+if resources != ['assets', 'scripts', 'agents']:
     raise SystemExit('Unexpected runtime resource manifest')
 destination = root / 'dist' / 'z-files-folders'
-expected = {'SKILL.md', 'assets/batch-log.csv', 'assets/completion-manifest.example.json',
+expected = {'SKILL.md', 'agents/openai.yaml', 'assets/batch-log.csv', 'assets/completion-manifest.example.json',
             'assets/prewrite-plan.example.json',
             'scripts/check_inventory.py', 'scripts/check_completion.py'}
 if destination.exists():
